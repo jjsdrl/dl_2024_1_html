@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024450194郑皓月</title>
+    <style>
+        /* 设置页面内边距和外边距为0 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 将内容移至页面中间 */
+        .box{
+            /* 设置弹性布局 */
+            display: flex;
+            /* 水平居中 */
+            justify-content: center; 
+            /* 垂直居中 */
+            align-items: center; 
+            height: 100vh;
+        }
+        /* 设置表格大小 */
+        table{
+            width: 600px;
+            height: 400px;
+            /* 取消格子间的间距 */
+            border-collapse: collapse;
+            /* 内容居中 */
+            text-align: center;
+        }
+        /* 设置图片大小 */
+        img{
+            width: 230px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- 给表格加边框 -->
+        <table border="1px solid #fff">
+            <!-- 第一行 -->
+            <tr>
+                <td>姓名:</td>
+                <td>张三</td>
+                <td>年龄:</td>
+                <td>18</td>
+                <!-- 合并三行 -->
+                <td rowspan="3" >
+                    <img src="./images/3.gif">
+                </td>
+            </tr>
+            <!-- 第二行 -->
+            <tr>
+                <td>性别:</td>
+                <td>男</td>
+                <td>籍贯:</td>
+                <td>中国</td>
+                <!-- 图片合并占用 -->
+                <!-- <td></td> -->
+            </tr>
+            <!-- 第三行 -->
+            <tr>
+                <td>手机号:</td>
+                <td>1234567890</td>
+                <td>qq号:</td>
+                <td>789654122</td>
+                <!-- 图片合并占用 -->
+                <!-- <td></td> -->
+            </tr>
+            <!-- 第四行 -->
+            <tr>
+                <td>毕业院校:</td>
+                <td>北京大学</td>
+                <td>电子邮箱:</td>
+                <!-- 合并2列 -->
+                <td colspan="2">789456123@qq.com</td>
+                <!-- 邮箱合并占用 -->
+                <!-- <td></td> -->
+            </tr>
+            <!-- 第五行 -->
+            <tr>
+                <td>住址:</td>
+                <!-- 合并四列 -->
+                <td colspan="4">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+                <!-- 地址合并占用 -->
+                <!-- 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                 -->
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>

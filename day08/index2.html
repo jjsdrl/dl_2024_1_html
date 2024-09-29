@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 取消页面的内外边距 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 设置盒子居中 */
+        #box{
+            margin: auto;
+            /* 设置高度 */
+            height: 600px;
+            /* 设置宽度 */
+            width: 400px;
+            /* 设置背景颜色 */
+            /* background-color: pink; */
+            background-color: white;
+            /* 设置文本居中 */
+            text-align: center;  
+            /* 设置位置  */
+            position: absolute;
+            top: 10%;
+            left: 40%;
+            box-shadow: #727070 2px 2px 2px 2px ;
+        }
+        #box .biaoqian{
+            /* 设置位置 */
+            position: relative;
+            
+
+        }
+        #box .biaoqian .text .mingzi{
+            /* 设置字体大小 */
+            font-size: 30px;
+        }
+        #box .biaoqian .text .jianjie{
+            /* 设置字体大小 */
+            font-size: 30px;
+            /* 设置字体颜色 */
+            color: #727070;
+        }
+        #box .biaoqian .text .jiage{
+            /* 设置字体大小 */
+            font-size: 30px;
+            /* 设置字体颜色 */
+            color: #e9cf0a;
+        }
+    </style>
+</head>
+<body>
+    <!-- 盒子 -->
+    <div id="box">
+            <div class="biaoqian">
+                <!-- 车图片模块 -->
+            <div class="car">
+                <!-- 图片 -->
+                <img src="./images/car.jpg" alt="" srcset="">
+            </div>
+            <!-- 文本模块 -->
+            <div class="text">
+                <!-- 名字 -->
+                <p class="mingzi">九号平衡车</p>
+                <!-- 换行 -->
+                <br>
+                <!-- 简介 -->
+                <p class="jianjie">85Kg安全载重</p>
+                <!-- 换行 -->
+                <br>
+                <!-- 价格 -->
+                <p class="jiage">1999元</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
