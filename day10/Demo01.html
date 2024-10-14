@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bq{
+            /* 行内块元素 */
+            display: inline-block;
+            width: 120px;
+            height: 58px;
+            /* 水平居中 */
+            text-align: center;
+            /* 调整垂直位置 */
+            line-height: 50px ;
+            /* 去除下划线 */
+            text-decoration: none;
+            /* 设置字体白色 */
+            color: white;
+        }
+        /* 选择器 */
+        .bq:nth-child(1){
+            /* 设置背景图片;不平铺(no-repeat) */
+            background: url("images/bg1.png") no-repeat;
+        }
+        .bq:nth-child(1):hover{
+            /* 鼠标悬停的时候修改背景图片 */
+            background: url("images/bg2.png") no-repeat;
+        }
+        .bq:nth-child(2){
+            background: url("images/bg3.jpg") no-repeat;
+        }
+        .bq:nth-child(2):hover{
+            /* 鼠标悬停的时候修改背景图片 */
+            background: url("images/bg4.png") no-repeat;
+        }
+        .bq:nth-child(3){
+            background: url("images/bg3.png") no-repeat;
+        }
+        .bq:nth-child(3):hover{
+            /* 鼠标悬停的时候修改背景图片 */
+            background: url("images/bg5.png") no-repeat;
+        }
+        .bq:nth-child(4){
+            background: url("images/bg11.png") no-repeat;
+        }
+        .bq:nth-child(4):hover{
+            /* 鼠标悬停的时候修改背景图片 */
+            background: url("images/bg22.png") no-repeat;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#" class="bq">五彩标签</a>
+        <a href="#" class="bq">五彩标签</a>
+        <a href="#" class="bq">五彩标签</a>
+        <a href="#" class="bq">五彩标签</a>
+    </div>
+</body>
+</html>
