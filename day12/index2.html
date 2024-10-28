@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024450194郑皓月</title>
+    <style>
+        /* 去除页面的内边距和外边距 */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* 设置大盒子大小 */
+        .box{
+            /* 居中效果 */
+            margin: 15% 30%;
+            width: 500px;
+            height: 220px;
+        }
+        /* 设置头模块长度 */
+        /* .f_title{
+            height: 48px;
+        } */
+        .juxing{
+            
+            /* box-sizing: border-box; */
+            /* 设置行内块元素 */
+            display: inline-block;
+            /* margin: 0 0 0 70px; */
+            height: 41px;
+            width: 426px;
+            /* 背景颜色 */
+            background-color: rgba(128, 130, 128,0.2);
+            /* 阴影 x轴偏移 y轴偏移 宽度 宽度 颜色 */
+            box-shadow: -1px 0 2px 2px rgba(128, 130, 128,0.3);
+            /* border: 1px solid rgba(128, 130, 128,0.3); */
+        }
+        .news{
+            /* 设置位置浮动 */
+            position: relative;
+            /* 调整位置 */
+            top: -11px;
+            left: 4px;
+            /* 修改盒子 */
+            box-sizing: border-box;
+            /* 外边距 */
+            margin: 0 1px;    
+            width: 70px;
+            height: 50px;
+            /* 去除下划线 */
+            text-decoration: none;
+            /* 设置字体大小 */
+            font-size: 20px;
+            /* 设置块内文本居中 */
+            padding: 6px 12px;
+            /* 顶部黄条 */
+            border-top: 5px solid #ef7e21;
+            /* 背景 */
+            background-color: white;
+            color: black;
+            
+        }
+        /* 新闻鼠标悬停效果 */
+        .news:hover{
+            color: #ef7e21;
+            background:  rgba(128, 130, 128,0.2);
+        }
+        /* 列表 */
+        li{
+            /* 列表序列设置图片 */
+            /* list-style: url("./images/square.png"); */
+            /* 不需要原来的小点 */
+            list-style: none;
+            /* 字体大小 */
+            font-size: 15px;
+            /* 内边距 */
+            padding: 10px 30px;
+            /* 字体颜色 */
+            color: rgb(128, 130, 128);
+        }
+        /* li里面的小点在li标签前面 */
+        li::before{
+            content: "";
+            /* 设置li标签的背景图片 */
+            background: url("images/img.gif") no-repeat;
+            /* 行内元素 */
+            display: inline-block;
+            width: 14px;
+            height: 12px;
+        }
+        /* li标签的鼠标悬停效果 */
+        li:hover{
+            /* 悬停时修改字体颜色和背景 */
+            color: #ef7e21;
+            background:  rgba(128, 130, 128,0.2);
+        }
+        /* li标签外的a标签 */
+        .box .f_body ul a{
+            /* 设置a标签为块元素 */
+            display: block;
+            /* 去除a标签里文本的下划线 */
+            text-decoration: none;
+            /* 设置a标签的背景图片 不平铺 位置是（左 上） */
+            background: url("./images/square.png") no-repeat 3% 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 大盒子 -->
+    <div class="box">
+        <!-- 标题块 -->
+        <div class="f_title">
+            <a href="#" class="news">新闻</a>
+            <div class="juxing"></div>
+        </div>
+        <!-- 内容块 -->
+        <div class="f_body">
+            <ul>
+                <a href="#">
+                    <li>
+                        <!-- <img src="./images/img.gif" alt=""> -->
+                        点赞“新农人”温暖的伸手
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <!-- <img src="./images/img.gif" alt=""> -->
+                        在希望的田野上...
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <!-- <img src="./images/img.gif" alt=""> -->
+                        "中国天眼"又有新发现 已在《自然》杂志发表
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <!-- <img src="./images/img.gif" alt=""> -->
+                        急!这个领域，缺人!月薪4万元还不好招!啥情况?
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <!-- <img src="./images/img.gif" alt=""> -->
+                        G9“带货”背后:亏损面持续扩大，竞争环境激烈
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <!-- <img src="./images/img.gif" alt=""> -->
+                        多地力推二手房“带押过户”，有什么好处?
+                    </li>
+                </a> 
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
