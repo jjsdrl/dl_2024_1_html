@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        body{
+            background-color: rgba(113, 112, 112, 0.1);
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        .header{
+            width: 1200px;
+            height: 50px;
+            margin: 30px auto;
+            /* background-color: antiquewhite; */
+            padding: 3px 0px;
+        }
+        .header div{
+            display: inline-block;
+        }
+        .h_logo{
+            float: left;
+            margin: 5px 60px 0px 0px;
+        }
+        .h_title{
+            float: left;
+            height: 50px;
+            margin: 0px 60px 0px 0px;
+        }
+        .h_title ul a{
+            display: inline-block;
+            height: 50px;
+            box-sizing: border-box;
+            padding: 15px 0;
+        }
+        .h_title ul a li{
+            list-style: none;
+            display: inline-block;
+            padding: 0px 30px;
+            font-size: 20px;
+            color: black;
+        }
+        .h_research{
+            margin: 15px 60px 0px 0px;
+        }
+        .h_research input{
+            float: left;
+            height: 27px;
+            width: 320px;
+            border: 1px solid rgb(63, 147, 242);
+        }
+        .h_research button{
+            width:  38px;
+            height: 28px;
+            border: none;
+        }
+        .h_research button img{
+            width: 100%;
+            height: 100%;
+        }
+        .user span{
+            float: right;
+            margin: 5px 5px;
+        }
+        .banner{
+            /* margin: 0px auto; */
+            height: 421px;
+            width: 100%;
+            background: url("./images/banner2.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .b_title{
+            height: 421px;
+            width: 199px;
+            margin: 0px 165px;
+            float: left;
+            background-color:rgba(20 ,20,20,0.4);
+        }
+        .b_title li{
+            display: block;
+            height: 46px;
+            font-size: 18px;
+            text-align: center;
+        }
+        .b_title li a{
+            display: inline-block;
+            color: white;
+        }
+        .b_title li a:hover{
+            color: #00a4ff;
+        }
+
+        .b_title li span{
+            margin: 10px 20px;
+        }
+        .b_title li .b_t_s_star{
+            float: left;
+        }
+
+        .b_title li .b_t_s_end{
+            float: right;
+        }
+        .b_classForm{
+            height: 300px;
+            width: 230px;
+            margin: 50px 165px;
+            float: right;
+            background-color: white;
+        }
+        .b_classForm .b_classForm_title{
+            height: 33px;
+            line-height: 32px;
+            background-color: #7cbee2;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+        .b_classForm .b_classForm_class{
+            margin: 0 20px;
+        }
+        .b_classForm .b_classForm_class li{
+            border-bottom: 1px solid rgba(113, 112, 112, 0.4);
+            height: 66px;
+            box-sizing: border-box;
+            padding: 14px 0;
+        }
+        .b_classForm .b_classForm_class li .b_classForm_class_big{
+            color: rgba(11, 10, 10, 0.6);
+        }
+        .b_classForm .b_classForm_class li .b_classForm_class_small{
+            color: rgba(113, 112, 112, 0.4);
+            font-size: 14px;
+        }
+        .b_classForm_button button{
+            width:  190px;
+            height: 50px;
+            margin: 14px 20px;
+            background-color: white;
+            border: 1px solid #00a4ff;
+            font-size: 20px;
+            color: #00a4ff;
+            text-decoration: underline;
+        }
+        .recommend{
+            /* background-color: antiquewhite; */
+            margin: 10px auto ;
+            width: 1200px;
+            height: 60px;
+            box-shadow:0 2px 3px 3px rgba(0, 0, 0, 0.1);
+        }
+        .recommend div{
+            display: inline-block;
+        }
+        .recommend .r_title_star{
+            float: left;
+            margin: 15px 30px;
+            color: #00a4ff;
+        }
+        .recommend .r_title_star h3::after{
+            content: "|";
+            color: rgba(113, 112, 112, 0.3);
+            position: relative;
+            left: 28px;
+        }
+        .recommend .r_title_body ul li{
+            float: left;
+            display: inline-block;
+            /* border-right: 2px solid rgba(113, 112, 112, 0.4); */
+        }
+        .recommend .r_title_body ul li::after{
+            content: "|";
+            color: rgba(113, 112, 112, 0.3);
+        }
+        .recommend .r_title_body ul li:last-child::after{
+            content: "";
+        }
+        .recommend .r_title_body ul li a{
+            padding: 18px 30px;
+            box-sizing: border-box;
+            display: inline-block;
+            height: 60px;
+            color: black;
+        }
+        .recommend .r_title_end{
+            display: inline-block;
+            float: right;
+            margin: 20px 30px;
+        }
+        .recommend .r_title_end a{
+            display: inline-block;
+            font-size: 14px;
+            color: #00a4ff;
+        }
+        .course{
+            width: 1200px;
+            margin: 10px auto;
+        }
+        .course .c_title{
+            height: 45px;
+            /* background-color: aqua; */
+        }
+        .course .c_title .c_title_star{
+            float: left;
+            box-sizing: border-box;
+            margin: 10px 30px;
+        }
+        .course .c_title .c_title_end a{
+            float: right;
+            margin: 13px 30px;
+            font-size: 14px;
+            color: rgba(113, 112, 112, 0.4);
+        }
+        .course .c_class ul{
+            width: 1215px;
+            height: 565px;
+        }
+        .course .c_class ul li{
+            width: 228px;
+            height: 270px;
+            display: inline-block;
+            float: left;
+            margin: 0px 15px 15px 0px;
+            background-color: white;
+        }
+        .course .c_class ul li .pic{
+            width: 228px;
+            height: 135px;
+        }
+        .course .c_class ul li .hot{
+            position: relative;
+            left: 192px;
+            top: -130px;
+        }
+        .course .c_class ul li .c_class_text{
+            margin: 0px 30px;
+        }
+        .course .c_class ul li .c_class_text .c_class_text_bottom{
+            font-size: 13px;
+            margin: 30px 0px;
+        }
+        .course .c_class ul li .c_class_text .c_class_text_bottom .c_class_text_bottom_left{
+            color: #f57804;
+        }
+        .course .c_class ul li .c_class_text .c_class_text_bottom .c_class_text_bottom_right{
+            color: rgba(113, 112, 112, 0.4);
+        }
+        .footer{
+            width: 1200px;
+            height: 300px;
+            margin: 35px auto;
+            padding: 50px 150px;
+            background-color: white;
+        }
+        .footer .f_left{
+            float: left;
+        }
+        .footer .f_left .f_left_text{
+            margin: 20px 0;
+            font-size: 13px;
+            color: rgba(113, 112, 112, 0.5);
+        }
+        .footer .f_left a{
+            display: block;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #00a4ff;
+            margin: 15px 0;
+            color: #00a4ff;
+        }
+        .footer .f_right{
+            float: right;
+        }
+        .footer .f_right .about{
+            display: inline-block;
+            margin: 0px 30px;
+            color: rgba(113, 112, 112);
+            font-size: 14px;
+        }
+        .footer .f_right .about li{
+            margin: 5px 0px;
+        }
+        .footer .f_right .about span{
+            display: inline-block;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="header">     
+            <div class="h_logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="h_title">
+                <ul>
+                    <a href="#">
+                        <li>
+                            首页
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            课程
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            职业规划
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="h_research">
+                <input type="text" placeholder="输入关键词">
+                <button>
+                    <img src="./images/btn.png" alt="">
+                </button>
+            </div>
+            <div class="user">
+                <img src="./images/user.png" alt="">
+                <span>qwer</span>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="b_title">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="b_t_s_star">前端开发</span>
+                            <span class="b_t_s_end">></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="b_t_s_star">前端开发</span>
+                            <span class="b_t_s_end">></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="b_t_s_star">前端开发</span>
+                            <span class="b_t_s_end">></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="b_t_s_star">前端开发</span>
+                            <span class="b_t_s_end">></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="b_t_s_star">前端开发</span>
+                            <span class="b_t_s_end">></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="b_t_s_star">前端开发</span>
+                            <span class="b_t_s_end">></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="b_t_s_star">前端开发</span>
+                            <span class="b_t_s_end">></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="b_t_s_star">前端开发</span>
+                            <span class="b_t_s_end">></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="b_t_s_star">前端开发</span>
+                            <span class="b_t_s_end">></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="b_classForm">
+                <div class="b_classForm_title">
+                    我的课程表
+                </div>
+                <div class="b_classForm_class">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p class="b_classForm_class_big">
+                                    <b>继续学习 程序语言设计</b>
+                                </p>
+                                <p class="b_classForm_class_small">正在学习-使用对象</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="b_classForm_class_big">
+                                    <b>继续学习 程序语言设计</b>
+                                </p>
+                                <p class="b_classForm_class_small">正在学习-使用对象</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="b_classForm_class_big">
+                                    <b>继续学习 程序语言设计</b>
+                                </p>
+                                <p class="b_classForm_class_small">正在学习-使用对象</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b_classForm_button">
+                    <button>
+                        <b>全部课程</b>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="recommend">
+            <div class="r_title_star">
+                <h3>
+                    精品推荐
+                </h3>
+            </div>
+            <div class="r_title_body">
+                <ul>
+                    <li>
+                        <a href="#">jQuery</a>
+                    </li>
+                    <li>
+                        <a href="#">jQuery</a>
+                    </li>
+                    <li>
+                        <a href="#">jQuery</a>
+                    </li>
+                    <li>
+                        <a href="#">jQuery</a>
+                    </li>
+                    <li>
+                        <a href="#">jQuery</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="r_title_end">
+                <a href="#">修改课程</a>
+            </div>
+        </div>
+        <div class="course">
+            <div class="c_title">
+                <div class="c_title_star">
+                    <h3>
+                        精品推荐
+                    </h3>
+                </div>
+                <div class="c_title_end">
+                    <a href="#">查看全部</a>
+                </div>
+            </div>
+            <div class="c_class">
+                <ul>
+                    <li>
+                        <img src="./images/pic.png" alt="" class="pic">
+                        <img src="./images/hot.png" alt="" class="hot">
+                        <div class="c_class_text">
+                            <p class="c_class_text_top">
+                                <b>
+                                    Think PHP 5.0 博客系统实战项目演练
+                                </b>
+                            </p>
+                            <p class="c_class_text_bottom">
+                                <span class="c_class_text_bottom_left">高级</span>
+                                <span class="c_class_text_bottom_right">・1125人在学习</span>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="./images/pic.png" alt="" class="pic">
+                        <img src="./images/hot.png" alt="" class="hot">
+                        <div class="c_class_text">
+                            <p class="c_class_text_top">
+                                <b>
+                                    Think PHP 5.0 博客系统实战项目演练
+                                </b>
+                            </p>
+                            <p class="c_class_text_bottom">
+                                <span class="c_class_text_bottom_left">高级</span>
+                                <span class="c_class_text_bottom_right">・1125人在学习</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/pic.png" alt="" class="pic">
+                        <img src="./images/hot.png" alt="" class="hot">
+                        <div class="c_class_text">
+                            <p class="c_class_text_top">
+                                <b>
+                                    Think PHP 5.0 博客系统实战项目演练
+                                </b>
+                            </p>
+                            <p class="c_class_text_bottom">
+                                <span class="c_class_text_bottom_left">高级</span>
+                                <span class="c_class_text_bottom_right">・1125人在学习</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/pic.png" alt="" class="pic">
+                        <img src="./images/hot.png" alt="" class="hot">
+                        <div class="c_class_text">
+                            <p class="c_class_text_top">
+                                <b>
+                                    Think PHP 5.0 博客系统实战项目演练
+                                </b>
+                            </p>
+                            <p class="c_class_text_bottom">
+                                <span class="c_class_text_bottom_left">高级</span>
+                                <span class="c_class_text_bottom_right">・1125人在学习</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/pic.png" alt="" class="pic">
+                        <img src="./images/hot.png" alt="" class="hot">
+                        <div class="c_class_text">
+                            <p class="c_class_text_top">
+                                <b>
+                                    Think PHP 5.0 博客系统实战项目演练
+                                </b>
+                            </p>
+                            <p class="c_class_text_bottom">
+                                <span class="c_class_text_bottom_left">高级</span>
+                                <span class="c_class_text_bottom_right">・1125人在学习</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/pic.png" alt="" class="pic">
+                        <img src="./images/hot.png" alt="" class="hot">
+                        <div class="c_class_text">
+                            <p class="c_class_text_top">
+                                <b>
+                                    Think PHP 5.0 博客系统实战项目演练
+                                </b>
+                            </p>
+                            <p class="c_class_text_bottom">
+                                <span class="c_class_text_bottom_left">高级</span>
+                                <span class="c_class_text_bottom_right">・1125人在学习</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/pic.png" alt="" class="pic">
+                        <img src="./images/hot.png" alt="" class="hot">
+                        <div class="c_class_text">
+                            <p class="c_class_text_top">
+                                <b>
+                                    Think PHP 5.0 博客系统实战项目演练
+                                </b>
+                            </p>
+                            <p class="c_class_text_bottom">
+                                <span class="c_class_text_bottom_left">高级</span>
+                                <span class="c_class_text_bottom_right">・1125人在学习</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/pic.png" alt="" class="pic">
+                        <img src="./images/hot.png" alt="" class="hot">
+                        <div class="c_class_text">
+                            <p class="c_class_text_top">
+                                <b>
+                                    Think PHP 5.0 博客系统实战项目演练
+                                </b>
+                            </p>
+                            <p class="c_class_text_bottom">
+                                <span class="c_class_text_bottom_left">高级</span>
+                                <span class="c_class_text_bottom_right">・1125人在学习</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/pic.png" alt="" class="pic">
+                        <img src="./images/hot.png" alt="" class="hot">
+                        <div class="c_class_text">
+                            <p class="c_class_text_top">
+                                <b>
+                                    Think PHP 5.0 博客系统实战项目演练
+                                </b>
+                            </p>
+                            <p class="c_class_text_bottom">
+                                <span class="c_class_text_bottom_left">高级</span>
+                                <span class="c_class_text_bottom_right">・1125人在学习</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/pic.png" alt="" class="pic">
+                        <img src="./images/hot.png" alt="" class="hot">
+                        <div class="c_class_text">
+                            <p class="c_class_text_top">
+                                <b>
+                                    Think PHP 5.0 博客系统实战项目演练
+                                </b>
+                            </p>
+                            <p class="c_class_text_bottom">
+                                <span class="c_class_text_bottom_left">高级</span>
+                                <span class="c_class_text_bottom_right">・1125人在学习</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="f_left">
+                <img src="./images/logo.png" alt="">
+                <div class="f_left_text">
+                    <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程.</p>
+                    <p>◎ 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+                </div>
+                <a href="#">下载APP</a>
+            </div>
+            <div class="f_right">
+                <div class="about">
+                    <ul>
+                        <span>关于学成网</span>
+                        <li>关于</li>
+                        <li>管理团队</li>
+                        <li>工作机会</li>
+                        <li>客服服务</li>
+                        <li>帮助</li>
+                    </ul>
+                </div>
+                <div class="about">
+                    <ul>
+                        <span>关于学成网</span>
+                        <li>关于</li>
+                        <li>管理团队</li>
+                        <li>工作机会</li>
+                        <li>客服服务</li>
+                        <li>帮助</li>
+                    </ul>
+                </div>
+                <div class="about">
+                    <ul>
+                        <span>关于学成网</span>
+                        <li>关于</li>
+                        <li>管理团队</li>
+                        <li>工作机会</li>
+                        <li>客服服务</li>
+                        <li>帮助</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
