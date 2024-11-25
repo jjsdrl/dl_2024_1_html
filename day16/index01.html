@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 400px;
+            height: 250px;
+            margin: 0 auto;
+        }
+        
+        img{
+            width: 400px;
+            height: 250px;
+        }
+        .box .pb{
+            display: none;
+            position: absolute;
+            top: 0;  
+            left: 34.4%;  
+            height: 250px;
+            width: 400px;
+            background: rgba(144, 142, 142, 0.5)  url(images/arr.png) center no-repeat;
+                      
+        }
+         .box:hover .pb{
+            content: "";
+            display: block;
+            
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="pb"></div>
+    <img src="./images/bg.avif" alt="" class="bg">
+</div>
+    
+</body>
+</html>

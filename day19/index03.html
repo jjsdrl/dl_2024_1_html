@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section div:nth-child(1){
+            background-color: red;
+        }
+        section p:nth-child(1){
+            background-color: palevioletred;
+        }
+        section div:nth-child(3){
+            background-color: pink;
+        }
+        section div:nth-of-type(1){
+            background-color: brown;
+        }
+
+        ul li:first-of-type{
+            background-color: aqua;
+        }
+        ul li:last-of-type{
+            background-color: aquamarine;
+        }
+        li:nth-child(2n)::after{
+            content: "after";
+            background-color: blue;
+        }
+        li:nth-child(2n+1)::before{
+            content: "before";
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+        <li>li5</li>
+        <li>li6</li>
+        <li>li7</li>
+    </ul>
+
+    <section>
+        <p>1</p>
+        <div>2</div>
+        <div>3</div>
+    </section>
+</body>
+</html>

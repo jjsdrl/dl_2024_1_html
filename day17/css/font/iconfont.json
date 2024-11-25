@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10130772",
+      "name": "可回收-布料类",
+      "font_class": "kehuishou-buliaolei",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "10130863",
+      "name": "有害垃圾",
+      "font_class": "youhailaji",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "10130868",
+      "name": "可回收物",
+      "font_class": "kehuishouwu",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "10135128",
+      "name": "其他垃圾-宠物粪便",
+      "font_class": "qitalaji-chongwufenbian",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    }
+  ]
+}
