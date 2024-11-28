@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            border: 1;
+        }
+    </style>
+
+    <script>
+        //网页弹窗
+        // alert("hello js!");
+        //控制台打印
+        // console.log("hello js");
+        //输入框
+        // prompt("你是?");
+        //往页面添加元素
+        // document.write("div标签");
+        //定义变量
+        // let name ;
+        // name=prompt("你是?");
+        // document.write(name);
+        let tnum = prompt("请输入商品数量");
+        let tmoney = prompt("请输入商品价格");
+        let taddress = prompt("请输入收货地址");
+        document.write(`<table>
+    <tr>
+        <th>商品名称</th>
+        <th>商品价格</th>
+        <th>商品数量</th>
+        <th>总价</th>
+        <th>收获地址</th>
+    </tr> 
+    <tr>
+        <td>小米6</td>
+        <td>${tmoney}</td>
+        <td>${tnum}元</td>
+        <td>${tmoney * tnum}</td>
+        <td>${taddress}</td>
+    </tr>                               
+            <table>`)
+    
+    </script>
+</head>
+<body>
+    <!-- <button>1</button>
+    <button>2</button>
+    <button>3</button> -->
+    
+    <!-- 导入js文件 -->
+    <script src="./js/Hello.js"></script>
+</body>
+</html>
